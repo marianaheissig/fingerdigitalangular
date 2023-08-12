@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AdminScreenComponent } from './admin-screen/admin-screen.component';
 import { ClientScreenComponent } from './client-screen/client-screen.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,15 @@ import { ClientScreenComponent } from './client-screen/client-screen.component';
     LoginComponent,
     SignupComponent,
     AdminScreenComponent,
-    ClientScreenComponent
+    ClientScreenComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

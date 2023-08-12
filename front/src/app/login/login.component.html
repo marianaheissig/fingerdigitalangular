@@ -1,9 +1,10 @@
     <div>
         <div class="formDiv">
         <p class="heading">ENTRAR</p>
-        <form action="" class="formLogin">
+        <!-- <form class="formLogin" #formLogin="ngForm" (ngSubmit)="submit()" [formGroup]="formLogin" > -->
+        <form class="formLogin" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
             <p class="label">Email:</p>
-            <input type="email" name="txtEmail" id="txtEmail" />
+            <input type="email" name="txtEmail" id="txtEmail" formControlName="emailForm" placeholder="email@email.com"/>
     
             <button type="submit">Entrar</button>
         </form>

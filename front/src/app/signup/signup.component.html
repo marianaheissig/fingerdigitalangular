@@ -1,36 +1,36 @@
 <div>
     <div class="formDiv signupDiv">
       <p class="heading">Cadastrar</p>
-      <form action="" class="formSignup">
+      <form class="formSignup" [formGroup]="formSignup" (ngSubmit)="onSubmit()">
         <p class="label">Nome:</p>
-        <input type="text" name="txtName" id="txtName" />
+        <input type="text" name="txtName" id="txtName" formControlName="signupName"/>
 
         <p class="label">CPF:</p>
-        <input type="text" name="txtCPF" id="txtCPF" />
+        <input type="text" name="txtCPF" id="txtCPF" formControlName="signupCPF" placeholder="insira o cpf sem pontos"/>
 
         <p class="label">Endereço:</p>
-        <input type="text" name="txtAddress" id="txtAddress" />
+        <input type="text" name="txtAddress" id="txtAddress" formControlName="signupAddress"/>
 
         <p class="label">Telefone:</p>
-        <input type="text" name="txtPhone" id="txtPhone" />
+        <input type="text" name="txtPhone" id="txtPhone" formControlName="signupPhone" placeholder="insira o telefone sem traços"/>
 
         <p class="label">Email:</p>
-        <input type="email" name="txtEmail" id="txtEmail" />
+        <input type="email" name="txtEmail" id="txtEmail" formControlName="signupEmail" />
 
         <p class="label">Data de nascimento:</p>
-        <input type="date" name="txtBirth" id="txtBirth" />
+        <input type="date" name="txtBirth" id="txtBirth" formControlName="signupBirth" />
 
         <p class="label">Usuario:</p>
-        <input type="radio" name="User" id="UserA" value="Admin" />
+        <input type="radio" name="signupUser" id="UserA" value="Admin" formControlName="signupUser"/>
         <label> Admin </label>
 
-        <input type="radio" name="User" id="UserN" value="Normal" />
+        <input type="radio" name="signupUser" id="UserN" value="Normal" formControlName="signupUser"/>
         <label> Comum </label>
 
         <p class="label">Sexo:</p>
-        <input type="radio" name="Sex" id="SexF" value="Fem" />
+        <input type="radio" name="signupSex" id="SexF" value="Fem" formControlName="signupSex"/>
         <label> Fem </label>
-        <input type="radio" name="Sex" id="SexM" value="Masc" />
+        <input type="radio" name="signupSex" id="SexM" value="Masc" formControlName="signupSex"/>
         <label> Masc</label>
         <br />
         <button type="submit">Entrar</button>

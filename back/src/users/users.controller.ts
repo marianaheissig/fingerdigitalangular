@@ -19,7 +19,7 @@ export class UsersController {
 
     @Put(':id')
     async update(@Param('id')id: number, @Body()userData: any) {
-    return this.usersService.update(id, userData);
+        return this.usersService.update(id, userData);
     }
 
     @Delete(':id')

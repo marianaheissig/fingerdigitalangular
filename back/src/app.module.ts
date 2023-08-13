@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { ConsoleLogger, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
@@ -13,7 +13,8 @@ import { TypeOrmModule } from '@nestjs/typeorm'
       username: 'postgres',
       password: 'Mariana0606',
       database: 'fingerdigital_bd',
-      entities: [__dirname + '/**/*.entity{.ts, .js}'],
+      entities: ['C:\\projetos\\fingerdigitalangular\\fingerdigitalangular\\back\\dist\\users\\user.entity.js'],
+      // entities: [__dirname + '/**/*.entity{.ts, .js}'],
       synchronize: true
     }),
     UsersModule
@@ -21,4 +22,5 @@ import { TypeOrmModule } from '@nestjs/typeorm'
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {}

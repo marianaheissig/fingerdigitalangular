@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AdminScreenComponent } from './admin-screen/admin-screen.component';
 import { ClientScreenComponent } from './client-screen/client-screen.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [],

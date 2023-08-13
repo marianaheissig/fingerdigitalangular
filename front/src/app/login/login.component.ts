@@ -14,14 +14,14 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     this.formLogin = new FormGroup({
-      emailForm: new FormControl ('', [Validators.email])
+      userEmail: new FormControl ('', [Validators.email])
     })
   }
 
   onSubmit(){
-    if(this.formLogin.valid){
+    if(this.formLogin.valid && this.formLogin.value.userEmail != ""){
     console.log("submitado")
-    console.log(this.formLogin.value.emailForm)
+    console.log(this.formLogin.value.userEmail)
     }
     else{
       console.log("email invalido");

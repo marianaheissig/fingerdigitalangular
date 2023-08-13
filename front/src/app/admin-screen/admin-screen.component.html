@@ -1,5 +1,82 @@
 <div class="messageDiv">
-      <P>Bem vindo ao sistema.</P>
-      <p>Ler, atualizar e excluir cadastros</p>
-      <a href="">Voltar</a>
+  <P class="titleDiv">Bem vindo ao sistema.</P>
+  <p class="titleDiv">Ler, atualizar e excluir cadastros</p>
+  
+      <table *ngIf="!userItem">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>User CPF</th>
+                <th>User Address</th>
+                <th>User Phone</th>
+                <th>User Email</th>
+                <th>User Birth</th>
+                <th>User Type</th>
+                <th>User Sex</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.userID }}</td>
+                <td>{{ user.userName }}</td>
+                <td>{{ user.userCPF }}</td>
+                <td>{{ user.userAddress }}</td>
+                <td>{{ user.userPhone }}</td>
+                <td>{{ user.userEmail }}</td>
+                <td>{{ user.userBirth }}</td>
+                <td>{{ user.userType }}</td>
+                <td>{{ user.userSex }}</td>
+                <td><button (click)="deleteItem(user.userID)" class="buttonTable">Deletar</button></td>
+                <td><button (click)="editarItem(user)" class="buttonTable">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div *ngIf="userItem" class=" editDiv">
+      <div class="formEditDiv">
+        <p class="titleDiv">ATUALIZAR</p>
+        <form class="formSignup" [formGroup]="formSignup" (ngSubmit)="onSubmit()">
+          <p class="label">Nome:</p>
+          <input type="text" name="txtName" id="txtName" formControlName="userName"/>
+  
+          <p class="label">CPF:</p>
+          <input type="text" name="txtCPF" id="txtCPF" formControlName="userCPF" placeholder="insira o cpf sem pontos"/>
+  
+          <p class="label">Endereço:</p>
+          <input type="text" name="txtAddress" id="txtAddress" formControlName="userAddress"/>
+  
+          <p class="label">Telefone:</p>
+          <input type="text" name="txtPhone" id="txtPhone" formControlName="userPhone" placeholder="insira o telefone sem traços e com ddd"/>
+  
+          <p class="label">Email:</p>
+          <input type="email" name="txtEmail" id="txtEmail" formControlName="userEmail" />
+  
+          <p class="label">Data de nascimento:</p>
+          <input type="date" name="txtBirth" id="txtBirth" formControlName="userBirth" />
+  
+          <p class="label">Usuario:</p>
+          <input type="radio" name="userType" id="UserA" value="1" formControlName="userType"/>
+          <label> Admin </label>
+  
+          <input type="radio" name="userType" id="UserN" value="2" formControlName="userType"/>
+          <label> Comum </label>
+  
+          <p class="label">Sexo:</p>
+          <input type="radio" name="userSex" id="SexF" value="Fem" formControlName="userSex"/>
+          <label> Fem </label>
+          <input type="radio" name="userSex" id="SexM" value="Masc" formControlName="userSex"/>
+          <label> Masc</label>
+          <br />
+          <button type="submit" class="buttonForm">Salvar</button>
+          <br/>
+          <button type="button" (click)="onBack()" class="buttonForm">Voltar</button>
+        </form>
+      </div>
+    </div>
+    
+
+
     </div> 

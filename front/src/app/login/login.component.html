@@ -4,7 +4,7 @@
         <!-- <form class="formLogin" #formLogin="ngForm" (ngSubmit)="submit()" [formGroup]="formLogin" > -->
         <form class="formLogin" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
             <p class="label">Email:</p>
-            <input type="email" name="txtEmail" id="txtEmail" formControlName="emailForm" placeholder="email@email.com"/>
+            <input type="email" name="txtEmail" id="txtEmail" formControlName="userEmail" placeholder="email@email.com"/>
     
             <button type="submit">Entrar</button>
         </form>

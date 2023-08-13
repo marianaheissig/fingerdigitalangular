@@ -3,37 +3,37 @@
       <p class="heading">Cadastrar</p>
       <form class="formSignup" [formGroup]="formSignup" (ngSubmit)="onSubmit()">
         <p class="label">Nome:</p>
-        <input type="text" name="txtName" id="txtName" formControlName="signupName"/>
+        <input type="text" name="txtName" id="txtName" formControlName="userName"/>
 
         <p class="label">CPF:</p>
-        <input type="text" name="txtCPF" id="txtCPF" formControlName="signupCPF" placeholder="insira o cpf sem pontos"/>
+        <input type="text" name="txtCPF" id="txtCPF" formControlName="userCPF" placeholder="insira o cpf sem pontos"/>
 
         <p class="label">Endereço:</p>
-        <input type="text" name="txtAddress" id="txtAddress" formControlName="signupAddress"/>
+        <input type="text" name="txtAddress" id="txtAddress" formControlName="userAddress"/>
 
         <p class="label">Telefone:</p>
-        <input type="text" name="txtPhone" id="txtPhone" formControlName="signupPhone" placeholder="insira o telefone sem traços"/>
+        <input type="text" name="txtPhone" id="txtPhone" formControlName="userPhone" placeholder="insira o telefone sem traços e com ddd"/>
 
         <p class="label">Email:</p>
-        <input type="email" name="txtEmail" id="txtEmail" formControlName="signupEmail" />
+        <input type="email" name="txtEmail" id="txtEmail" formControlName="userEmail" />
 
         <p class="label">Data de nascimento:</p>
-        <input type="date" name="txtBirth" id="txtBirth" formControlName="signupBirth" />
+        <input type="date" name="txtBirth" id="txtBirth" formControlName="userBirth" />
 
         <p class="label">Usuario:</p>
-        <input type="radio" name="signupUser" id="UserA" value="Admin" formControlName="signupUser"/>
+        <input type="radio" name="userType" id="UserA" value="1" formControlName="userType"/>
         <label> Admin </label>
 
-        <input type="radio" name="signupUser" id="UserN" value="Normal" formControlName="signupUser"/>
+        <input type="radio" name="userType" id="UserN" value="2" formControlName="userType"/>
         <label> Comum </label>
 
         <p class="label">Sexo:</p>
-        <input type="radio" name="signupSex" id="SexF" value="Fem" formControlName="signupSex"/>
+        <input type="radio" name="userSex" id="SexF" value="Fem" formControlName="userSex"/>
         <label> Fem </label>
-        <input type="radio" name="signupSex" id="SexM" value="Masc" formControlName="signupSex"/>
+        <input type="radio" name="userSex" id="SexM" value="Masc" formControlName="userSex"/>
         <label> Masc</label>
         <br />
-        <button type="submit">Entrar</button>
+        <button type="submit">Cadastrar</button>
       </form>
       <a href="">Logar conta</a>
     </div>

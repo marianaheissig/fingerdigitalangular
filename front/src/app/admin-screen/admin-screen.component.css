@@ -1,0 +1,101 @@
+/* STYLE DA DIV PRINCIPAL */
+.formDiv, .messageDiv{
+    /* position: absolute; */
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 900px;
+    height: fit-content;
+    background-color: #e6e4d6;
+    padding: 5rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-radius: 90px;
+}
+
+/* STYLE DA TABELA */
+table{
+    margin: auto;   
+    margin-bottom: 40px;
+    font-family: sans-serif;
+    font-size: 12px;
+    border: #000 solid 0.5px;
+
+}
+
+th{
+    padding: 12px;
+    background-color: #9bbba3;
+    width: 70px;
+}
+
+td{
+    padding: 3px;
+}
+
+tr:nth-child(even){
+    background-color: #c7c5b7;
+}
+
+.buttonTable{
+    background-color: #00000000;
+    border: #00000000 solid 0.3px;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+buttonTable:hover{
+    background-color: #00000026;
+    transition: 0.5s;
+}
+
+/*STYLE DOS TEXTOS DA DIV*/
+.messageDiv .titleDiv{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*STYLE DO FORM DE EDITAR*/
+
+.buttonForm, .formEditDiv input{
+    width: 440px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+
+input[type=radio]{
+    width: 30px !important;
+}
+
+label{
+    color: #000;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.formEditDiv button{
+    font-family: sans-serif;
+    width: 400px;
+    background-color: #0a5523;
+    color: white;
+    cursor: pointer;
+}
+
+
+.label{
+    font-family: sans-serif;
+    color: #000;
+    font-size: 16px;
+}

@@ -11,10 +11,9 @@ import { TypeOrmModule } from '@nestjs/typeorm'
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'Mariana0606',
+      password: 'root',
       database: 'fingerdigital_bd',
-      entities: ['C:\\projetos\\fingerdigitalangular\\fingerdigitalangular\\back\\dist\\users\\user.entity.js'],
-      // entities: [__dirname + '/**/*.entity{.ts, .js}'],
+      entities: ['users/*.ts'],
       synchronize: true
     }),
     UsersModule
